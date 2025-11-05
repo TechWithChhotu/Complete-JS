@@ -15,3 +15,7 @@ Complete JavaScript.
 [refrence_data_type](./01_basics/07_refrenceDataType.js)
 
 [string_1](./02_intermediate/01_string.js) [string_2](./02_intermediate/02_string.js) [string_3](./02_intermediate/03_string.js) [string_4](./02_intermediate/04_string.js)
+
+[number](./02_intermediate/05_number.js)
+
+[math](./02_intermediate/06_math.js)
