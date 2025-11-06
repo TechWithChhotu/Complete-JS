@@ -19,3 +19,5 @@ Complete JavaScript.
 [number](./02_intermediate/05_number.js)
 
 [math](./02_intermediate/06_math.js)
+
+[date & time](./02_intermediate/07_date_time.js)
