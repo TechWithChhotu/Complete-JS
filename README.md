@@ -21,3 +21,5 @@ Complete JavaScript.
 [math](./02_intermediate/06_math.js)
 
 [date & time](./02_intermediate/07_date_time.js)
+
+[array_1](./02_intermediate/08_array.js) [array_2](./02_intermediate/09_array.js)
