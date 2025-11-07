@@ -23,3 +23,5 @@ Complete JavaScript.
 [date & time](./02_intermediate/07_date_time.js)
 
 [array_1](./02_intermediate/08_array.js) [array_2](./02_intermediate/09_array.js)
+
+[object](./02_intermediate/10_object.js) [object](./02_intermediate/11_object.js)
