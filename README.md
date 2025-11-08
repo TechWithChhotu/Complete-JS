@@ -27,3 +27,5 @@ Complete JavaScript.
 [object](./02_intermediate/10_object.js) [object](./02_intermediate/11_object.js)
 
 [functin_1](./03_intermediate/01_function.js) [function_2](./03_intermediate/02_this_arrowFunction.js) [functin_3](./03_intermediate/03_IIFE.js)
+
+[if_else](./04_control_flow/ifElse.js) [switch_case](./04_control_flow/switchCase.js) [truthly](./04_control_flow/truthly.js)
