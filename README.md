@@ -29,3 +29,7 @@ Complete JavaScript.
 [functin_1](./03_intermediate/01_function.js) [function_2](./03_intermediate/02_this_arrowFunction.js) [functin_3](./03_intermediate/03_IIFE.js)
 
 [if_else](./04_control_flow/ifElse.js) [switch_case](./04_control_flow/switchCase.js) [truthly](./04_control_flow/truthly.js)
+
+# Iterations
+
+[for loop](./05_iterations/1_forLoop.js) [while & do-while](./05_iterations/2_do_whileLoop.js) [for_of & Map DS](./05_iterations/3_forOf_MapDS.js) [for_in](./05_iterations/4_forIn.js) [forEach](./05_iterations/5_forEach.js) [filter](./05_iterations/6_filter.js) [map](./05_iterations/7_map.js)
