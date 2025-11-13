@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chai aur code | DOM</title>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <ul class="language">
+      <li>Javascript</li>
+    </ul>
+  </body>
+  <script>
+    function addLanguage(lang) {
+      let li = document.createElement("li");
+      li.innerText = lang;
+      //   console.log(li);
+      //   console.log(language);
+      document.querySelector(".language").appendChild(li);
+    }
+
+    addLanguage("Python");
+    addLanguage("C++");
+    addLanguage("JAVA");
+
+    // ____________Edit Element___________
+    const secondLang = document.querySelectorAll("li");
+    secondLang[1].innerText = "goLang";
+    // 2nd way
+    const secondLang2ndWay = (document.querySelector(
+      "li:nth-child(3)"
+    ).innerText = "MOJO");
+    // console.log(secondLang2ndWay);
+
+    const firstLi = document.querySelector("li");
+    firstLi.outerHTML = "<li>MATLAB</li>";
+
+    // _______Remove Element________
+    const lastLanguage = document.querySelector("li:last-child");
+    // console.log(lastLanguage);
+    lastLanguage.remove();
+  </script>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>DOM | F1</title>
+  </head>
+
+  <body class="bg-black">
+    <div>
+      <h1 id="title" class="heading">
+        DOM learning | DOM Selector
+        <span style="display: none">test text</span>
+      </h1>
+      <h2>Lorem ipsum dolor sit.</h2>
+      <h2>Lorem ipsum dolor sit.</h2>
+      <h2>Lorem ipsum dolor sit.</h2>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <input type="password" name="" id="" />
+
+      <ul class="unorder-list">
+        <li class="list-item">1st list item</li>
+        <li class="list-item">2nd list item</li>
+        <li class="list-item">3rd list item</li>
+        <li class="list-item">4th list item</li>
+      </ul>
+    </div>
+
+    <!-- ***************** JS ************** -->
+    <script>
+      // DOM Selector -> getElementsByTagName --> it returns html collection
+      document.getElementsByTagName("body")[0].style.backgroundColor = "#000";
+      document.getElementsByTagName("body")[0].style.color = "#fff";
+
+      // DOM Selector -> getElementById
+      const title = document.getElementById("title");
+      title.style.background = "yellow";
+      title.style.color = "Black";
+      title.style.textAlign = "center"; //end
+
+      //DOM Selector -> getElementByClassName --> it returns html collection
+      const unorderList = document.getElementsByClassName("unorder-list");
+      unorderList[0].style.backgroundColor = "blue";
+
+      //DOM Selector -> querySelector
+      const firstH2 = document.querySelector("h2");
+      firstH2.style.color = "pink";
+      firstH2.textContent = "Document Object Model";
+
+      // DOM -> querySelectorAll --> it returns html collection
+      const listItem = document.querySelectorAll("li");
+      listItem[0].style.color = "red";
+      listItem[1].style.color = "pink";
+      listItem[2].style.color = "yellow";
+      listItem[3].style.color = "gray";
+    </script>
+  </body>
+</html>
