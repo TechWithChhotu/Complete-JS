@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Guessing Game</title>
+
+    <style>
+      body {
+        font-family: sans-serif;
+        background: #212121;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+      }
+
+      #wrapper {
+        text-align: center;
+        width: 450px;
+        background: #474747;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      h1 {
+        background: #161616;
+        padding: 10px;
+      }
+
+      #guessField {
+        width: 250px;
+        height: 50px;
+        font-size: 22px;
+        text-align: center;
+        border: 3px solid #6c6d6d;
+        margin: 20px 0;
+      }
+
+      #subt,
+      #start {
+        width: 200px;
+        height: 45px;
+        border: none;
+        font-size: 18px;
+        color: #fff;
+        background: #161616;
+        border-radius: 8px;
+        margin-top: 15px;
+        cursor: pointer;
+      }
+
+      #start {
+        display: none;
+      }
+
+      .resultParas p {
+        margin: 10px 0;
+      }
+
+      .guesses,
+      .lastResult {
+        color: #fff;
+        background: #7a7a7a;
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <h1>Number Guessing Game</h1>
+
+      <p>Guess a number between 1 and 100</p>
+      <p>You have 10 attempts</p>
+
+      <div style="display: grid; justify-content: center">
+        <label for="guessField">Enter Guess</label>
+        <input type="text" id="guessField" />
+      </div>
+
+      <div>
+        <input type="submit" id="subt" value="Submit Guess" />
+        <input type="button" id="start" value="Start New Game" />
+      </div>
+
+      <div class="resultParas">
+        <p>Previous Guesses: <span class="guesses"></span></p>
+        <p>Remaining Attempts: <span class="lastResult">10</span></p>
+        <p class="lowOrHi"></p>
+      </div>
+
+      <p id="message"></p>
+    </div>
+
+    <script>
+      let randomNumber = Math.floor(Math.random() * 100) + 1;
+
+      const submitBtn = document.getElementById("subt");
+      const guessField = document.getElementById("guessField");
+      const previousGuesses = document.querySelector(".guesses");
+      const remaining = document.querySelector(".lastResult");
+      const lowOrHi = document.querySelector(".lowOrHi");
+      const message = document.getElementById("message");
+      const startBtn = document.getElementById("start");
+
+      let guesses = [];
+      let attemptsLeft = 10;
+
+      function validateGuess(num) {
+        if (isNaN(num) || num < 1 || num > 100) {
+          alert("Plz enter a valid number between 1 and 100");
+
+          showMessage(`Plz enter a valid number between 1 to 100.`);
+          return false;
+        }
+        guesses.push(num);
+        attemptsLeft--;
+
+        previousGuesses.textContent = guesses.join(", ");
+        remaining.textContent = attemptsLeft;
+        return true;
+      }
+
+      function showMessage(msg) {
+        message.textContent = msg;
+      }
+
+      submitBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        let guess = parseInt(guessField.value);
+        if (!validateGuess(guess)) return;
+
+        if (guess === randomNumber) {
+          showMessage("🎉 Correct! You win!");
+          endGame();
+        } else if (attemptsLeft === 0) {
+          showMessage(`❌ Game Over! Number was ${randomNumber}`);
+          endGame();
+        } else if (Math.abs(randomNumber - guess) <= 10) {
+          showMessage("🔥 Very close!");
+        } else if (guess < randomNumber) {
+          showMessage("📉 Too Low!");
+        } else {
+          showMessage("📈 Too High!");
+        }
+
+        guessField.value = "";
+      });
+
+      function endGame() {
+        submitBtn.style.display = "none";
+        startBtn.style.display = "inline-block";
+      }
+
+      startBtn.addEventListener("click", () => {
+        window.location.reload();
+      });
+    </script>
+  </body>
+</html>

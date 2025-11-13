@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background Color Changer</title>
+    <style>
+      .box {
+        display: flex;
+        justify-content: space-around;
+      }
+      .color-btn {
+        width: 200px;
+        height: 200px;
+        border: 2px solid gray;
+      }
+      #red {
+        background: red;
+      }
+      #blue {
+        background: blue;
+      }
+      #green {
+        background: green;
+      }
+      #yellow {
+        background: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center">
+      Click any color to Change Background Color
+    </h1>
+    <div class="box">
+      <div class="color-btn" id="red"></div>
+      <div class="color-btn" id="blue"></div>
+      <div class="color-btn" id="green"></div>
+      <div class="color-btn" id="yellow"></div>
+    </div>
+  </body>
+  <script>
+    const btn = document.querySelectorAll(".color-btn");
+    const body = document.querySelector("body");
+
+    btn.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        body.style.background = e.target.id;
+      });
+    });
+  </script>
+</html>

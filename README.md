@@ -39,3 +39,7 @@ Complete JavaScript.
 - always open browser console side by side when study DOM.
 
 [DOM_1](./06_DOM/01_index.html) [DOM_2](./06_DOM/02_index.html) [DOM_3](./06_DOM/03_index.html) [DOM_3](./06_DOM/04_index.html)
+
+# 4 Projects
+
+[Color_Changer](./07_projects/1_ColorChanger.html) [BMI Calculator](./07_projects/2_BMICalculator.html) [Digital_Clock](./07_projects/3_digitalClock.html) [Number_Guessing_game](./07_projects/4_numberGuessing.html)
