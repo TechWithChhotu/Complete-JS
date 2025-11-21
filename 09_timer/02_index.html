@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setInterval & clearInterval</title>
+  </head>
+  <body>
+    <h1>Interval Function</h1>
+    <p id="console" style="font-size: xx-large">0</p>
+    <button id="startInterval">Start</button>
+    <button id="stopInterval">Stop</button>
+  </body>
+  <script>
+    let startInterval;
+    let count = 0;
+    document.querySelector("#startInterval").addEventListener("click", () => {
+      startInterval = setInterval(() => {
+        document.querySelector("#console").innerHTML = ++count;
+      }, 2000);
+    });
+
+    document.querySelector("#stopInterval").addEventListener("click", () => {
+      clearInterval(startInterval);
+    });
+  </script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setTimeOut & clearTimeOut</title>
+  </head>
+  <body>
+    <h1>Timer Function</h1>
+    <button id="start">Start Timer</button>
+    <button id="stop">Stop Timer</button>
+  </body>
+  <script>
+    let startTimer;
+
+    document.getElementById("start").addEventListener("click", () => {
+      console.log(
+        "After 2 seconds setTimeOut execute! if you want to stop then press stop button"
+      );
+
+      startTimer = setTimeout(() => {
+        console.log("After 2 seconds setTimeOut executed");
+        document.querySelector("h1").innerText = "Timer Function In JavaScript";
+      }, 2000);
+    });
+
+    document.getElementById("stop").addEventListener("click", function () {
+      console.log("setTimeOut Stoped before 2 seconds");
+
+      clearTimeout(startTimer);
+    });
+  </script>
+</html>

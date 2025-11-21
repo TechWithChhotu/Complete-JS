@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Number Guessing Game</title>
+  </head>
+  <body>
+    <h1>Start should change the Background color every second</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    let startButton = document.getElementById("start");
+    let stopButton = document.getElementById("stop");
+    let intervalId;
+    // #999999->1st 2digit-go left to right, 2nd 2digit-go bottom to top, 3rd 2digit
+    let randomColor = () => {
+      let min = 100000;
+      let max = 999999;
+      let randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+      return `#${randomNumber}`;
+    };
+
+    startButton.addEventListener("click", () => {
+      if (!intervalId) {
+        intervalId = setInterval(() => {
+          document.querySelector("body").style.backgroundColor = randomColor();
+        }, 1000);
+      }
+    });
+
+    stopButton.addEventListener("click", () => {
+      clearInterval(intervalId);
+      console.log("stoped btn clicked");
+    });
+  </script>
+</html>

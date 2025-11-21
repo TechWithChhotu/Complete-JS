@@ -43,3 +43,17 @@ Complete JavaScript.
 # 4 Projects
 
 [Color_Changer](./07_projects/1_ColorChanger.html) [BMI Calculator](./07_projects/2_BMICalculator.html) [Digital_Clock](./07_projects/3_digitalClock.html) [Number_Guessing_game](./07_projects/4_numberGuessing.html)
+
+# Event
+
+[event](./08_events/1_event.html)
+
+# Timer Function
+
+[set_time_out & clear_time_out](./09_timer/01_index.html)  
+[set_interval & clear_interval](./09_timer/02_index.html)
+
+# Projects
+
+[keyboard_magic](./10_projects/01_keyboardMagic.html)  
+[unlimited_bg_color_changer](./10_projects/02_unlimitedColorChanger.html)
